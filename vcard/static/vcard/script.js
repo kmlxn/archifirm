@@ -10,6 +10,8 @@ $(document).ready(function() {
 
 
 // Clouds
+var cloudsNum = 15;
+
 (function() {
 		var lastTime = 0;
 		var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -52,11 +54,10 @@ $(document).ready(function() {
 	generate();
 
 	function createCloud() {
-
 		var div = document.createElement( 'div'  );
 		div.className = 'cloudBase';
 		var x = 256 - ( Math.random() * 512 );
-		var y = 256 - ( Math.random() * 512 );
+		var y = Math.random() * 256
 		var z = 256 - ( Math.random() * 512 );
 		var t = 'translateX( ' + x + 'px ) translateY( ' + y + 'px ) translateZ( ' + z + 'px )';
 		div.style.webkitTransform = t;
@@ -112,7 +113,7 @@ $(document).ready(function() {
 				world.removeChild( world.firstChild );
 			}
 		}
-		for( var j = 0; j < 5; j++ ) {
+		for( var j = 0; j < window.cloudsNum; j++ ) {
 			objects.push( createCloud() );
 		}
 	}
