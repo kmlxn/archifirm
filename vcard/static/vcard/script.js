@@ -1,3 +1,15 @@
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        anchors:['main', 'projects', 'about', 'contacts'],
+        verticalCentered: false,
+        menu: '#nav'
+    });
+    $.fn.fullpage.setAllowScrolling(false);
+    $.fn.fullpage.setKeyboardScrolling(false);
+});
+
+
+// Clouds
 (function() {
 		var lastTime = 0;
 		var vendors = ['ms', 'moz', 'webkit', 'o'];
