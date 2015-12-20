@@ -11,10 +11,6 @@ body {
 	line-height: 16px;
 	overflow: hidden;
 }
-.wrapper {
-    margin: 0 200px 0 200px;
-    padding-top: 20px;
-}
 ul {
     list-style-type: none;
 }
@@ -46,7 +42,7 @@ h1 a {
     text-decoration: none;
     color: inherit;
 }
-.logo {
+.main h1 {
     font-size: 50px;
     text-align: center;
 }
@@ -67,147 +63,8 @@ h1 a {
     background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
 }
 .projects h1 {
     position: absolute;
     z-index: 999;
-}
-
-/* Clouds */
-#viewport {
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-o-perspective: 1000;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	background-image: linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
-	background-image: -o-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
-	background-image: -moz-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
-	background-image: -webkit-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
-	background-image: -ms-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0.28, rgb(69,132,180)),
-		color-stop(0.64, rgb(31,71,120))
-	);
-    z-index: -999;
-}
-#world {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -256px;
-	margin-top: -256px;
-	height: 512px;
-	width: 512px;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-}
-#world div {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-}
-.cloudBase {
-	position: absolute;
-	left: 256px;
-	top: 256px;
-	width: 20px;
-	height: 20px;
-	margin-left: -10px;
-	margin-top: -10px;
-}
-.cloudLayer {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 256px;
-	height: 256px;
-	margin-left: -128px;
-	margin-top: -128px;
-	-webkit-transition: opacity .5s ease-out;
-	-moz-transition: opacity .5s ease-out;
-	-o-transition: opacity .5s ease-out;
-	background-image: url('/static/vcard/cloud.png');
-}
-
-/* Projects Grid */
-
-#info {
-  position: absolute;
-  width: 100%;
-  color: #ffffff;
-  padding: 5px;
-  font-family: Monospace;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-  z-index: 1;
-}
-.projectsmenu {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-.element {
-  width: 120px;
-  height: 160px;
-  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
-  border: 1px solid rgba(127,255,255,0.25);
-  text-align: center;
-  cursor: default;
-}
-.element:hover {
-  box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
-  border: 1px solid rgba(127,255,255,0.75);
-}
-.element .number {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 12px;
-  color: rgba(127,255,255,0.75);
-}
-.element .symbol {
-  position: absolute;
-  top: 40px;
-  left: 0px;
-  right: 0px;
-  font-size: 60px;
-  font-weight: bold;
-  color: rgba(255,255,255,0.75);
-  text-shadow: 0 0 10px rgba(0,255,255,0.95);
-}
-.element .details {
-  position: absolute;
-  bottom: 15px;
-  left: 0px;
-  right: 0px;
-  font-size: 12px;
-  color: rgba(127,255,255,0.75);
-}
-button {
-  color: rgba(127,255,255,0.75);
-  background: transparent;
-  outline: 1px solid rgba(127,255,255,0.75);
-  border: 0px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgba(0,255,255,0.5);
-}
-button:active {
-  color: #000000;
-  background-color: rgba(0,255,255,0.75);
 }
