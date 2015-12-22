@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        anchors:['main', 'projects', 'about', 'contact'],
+        anchors:['hello', 'we'],
         verticalCentered: false,
+        controlArrows: false,
         onLeave: function(index, nextIndex, direction) {
             var nav = $('nav');
 
@@ -14,6 +15,22 @@ $(document).ready(function() {
             }
         }
     });
+
     $.fn.fullpage.setAllowScrolling(false);
     $.fn.fullpage.setKeyboardScrolling(false);
+
+    $(window).on('hashchange', function() {
+        if (window.location.hash == '#hello')
+            removeHash();
+    });
+
+    var removeHash = function() {
+        var loc = window.location;
+
+        if ("pushState" in history)
+            history.pushState("", document.title, loc.pathname + loc.search);
+        else {
+            loc.hash = "";
+        }
+    }
 });

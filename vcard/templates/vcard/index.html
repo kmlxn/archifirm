@@ -10,13 +10,13 @@
     </head>
     <body>
         <div id="fullpage">
-            <div class="section main">
+            <div class="section primary">
                 <nav>
                     <ul id="nav" class="nav">
-                        <li><a href="#main">Main</a></li> |
-                        <li><a href="#projects">Projects</a></li> |
-                        <li><a href="#about">About Us</a></li> |
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#hello">Main</a></li> |
+                        <li><a href="#we/projects">Projects</a></li> |
+                        <li><a href="#we/about">About Us</a></li> |
+                        <li><a href="#we/contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="gradient"></div>
@@ -27,18 +27,20 @@
                 	<div id="cloudsworld"></div>
                 </div>
             </div>
-            <div class="section projects">
-                <h1>Projects</h1>
-                <div id="projectstable"></div>
-                <div class="projectsmenu">
-                    <button id="table">TABLE</button>
-                    <button id="sphere">SPHERE</button>
-                    <button id="helix">HELIX</button>
-                    <button id="grid">GRID</button>
+            <div class="section secondary">
+                <div class="slide" data-anchor="projects">
+                    <h1>Projects</h1>
+                    <div id="projectstable"></div>
+                    <div class="projectsmenu">
+                        <button id="table">TABLE</button>
+                        <button id="sphere">SPHERE</button>
+                        <button id="helix">HELIX</button>
+                        <button id="grid">GRID</button>
+                    </div>
                 </div>
+                <div class="slide" data-anchor="about">About Us</div>
+                <div class="slide" data-anchor="contact">Contact</div>
             </div>
-            <div class="section">About Us</div>
-            <div class="section">Contact</div>
         </div>
     </body>
     <script src="/static/vcard/jquery.min.js" charset="utf-8"></script>
