@@ -8,6 +8,7 @@ $(document).ready(function() {
 
             if (index == 1 && nextIndex == 2) {
                 $(nav).animate({'bottom': '-50px'}, 700);
+                window.runProjectsTableOnce();
             }
 
             if (index == 2 && nextIndex == 1) {
