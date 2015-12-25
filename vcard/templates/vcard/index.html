@@ -37,6 +37,16 @@
                         <button id="projectstable_helix">HELIX</button>
                         <button id="projectstable_grid">GRID</button>
                     </div>
+                    <script>
+                        window.projects = [
+                            {% for project in projects %}
+                                {
+                                    pictureUrl: "{{ project.picture.url }}",
+                                    caption: "{{ project.caption }}",
+                                },
+                            {% endfor %}
+                        ];
+                    </script>
                 </div>
                 <div class="slide" data-anchor="about">About Us</div>
                 <div class="slide" data-anchor="contact">Contact</div>
