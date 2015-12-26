@@ -4,7 +4,7 @@ $(document).ready(function() {
         verticalCentered: false,
         controlArrows: false,
         onLeave: function(index, nextIndex, direction) {
-            var nav = $('nav');
+            var nav = $('.index_page nav');
 
             if (index == 1 && nextIndex == 2) {
                 $(nav).animate({'bottom': '-50px'}, 700);

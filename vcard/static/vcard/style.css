@@ -2,19 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.3em;
 }
 body {
 	color: grey;
-	text-shadow: 0 -1px 0 rgba( 0, 0, 0, .6 );
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	line-height: 16px;
-	overflow: hidden;
 }
 ul {
     list-style-type: none;
 }
-nav {
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Index page */
+body.index_page {
+    overflow: hidden;
+}
+.index_page nav {
     position: fixed;
     bottom: 0;
     margin-bottom: 20px;
@@ -22,28 +29,24 @@ nav {
     text-align: center;
     z-index: 999;
 }
-.nav {
+.index_page nav ul {
     display: inline-block;
 }
-.nav li {
+.index_page nav ul li {
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
 }
-.nav li a {
+.index_page nav ul li a {
     text-decoration: none;
     color: inherit;
 }
-.nav li.active a {
+.index_page nav ul li.active a {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
 }
-h1 a {
-    text-decoration: none;
-    color: inherit;
-}
-.primary h1 {
+.section.hello h1 {
     font-size: 50px;
     text-align: center;
 }
@@ -65,11 +68,51 @@ h1 a {
     background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
-.secondary h1 {
+.section.we h1 {
     position: absolute;
     z-index: 999;
 }
-/* Fullpage.js tweak */
-.slide {
+.slide {  /* Fullpage.js tweak */
     position:relative;
+}
+
+/* Project details page */
+.project_page nav {
+    margin-bottom: 1px;
+}
+.project_page nav ul {
+    text-align: center;
+}
+.project_page nav li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.project_page nav a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    margin: 10px 30px 0;
+}
+.project_img {
+    width: 45%;
+    float: left;
+    margin-right: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.project_page h1 {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.unfloat {
+    clear: both;
+}
+@media (max-width: 600px) {
+    .project_img {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+    .project_description {
+        margin-top: 2px;
+    }
 }

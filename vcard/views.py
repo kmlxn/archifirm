@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 def _get_urls():
     return {
-        'main': reverse('vcard:index_page'),
+        'main': reverse('vcard:index_page') + '#hello',
         'projects': reverse('vcard:index_page') + '#we',
         'about': reverse('vcard:index_page') + '#we/about',
         'contact': reverse('vcard:index_page') + '#we/contact',
