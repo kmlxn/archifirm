@@ -8,7 +8,7 @@ class ProjectAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,
             {'fields':
-                ['caption', 'picture']
+                ['caption', 'picture', 'tech_name', 'description']
             }
         )
     ]

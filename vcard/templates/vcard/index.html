@@ -13,10 +13,10 @@
             <div class="section primary">
                 <nav>
                     <ul id="nav" class="nav">
-                        <li><a href="#hello">Main</a></li> |
-                        <li><a href="#we/projects">Projects</a></li> |
-                        <li><a href="#we/about">About Us</a></li> |
-                        <li><a href="#we/contact">Contact</a></li>
+                        <li><a href="{{ urls.main }}">Main</a></li> |
+                        <li><a href="{{ urls.projects }}">Projects</a></li> |
+                        <li><a href="{{ urls.about }}">About Us</a></li> |
+                        <li><a href="{{ urls.contact }}">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="gradient"></div>
@@ -43,6 +43,7 @@
                                 {
                                     pictureUrl: "{{ project.picture.url }}",
                                     caption: "{{ project.caption }}",
+                                    url: "{{ project.get_absolute_url }}",
                                 },
                             {% endfor %}
                         ];

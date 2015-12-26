@@ -49,8 +49,12 @@
 
     		var symbol = document.createElement('div');
     		symbol.className = 'symbol';
-    		symbol.innerHTML = '<img width="118" style="max-height: 105px !important;"\
-                src="' + projects[i].pictureUrl + '"/>';
+    		symbol.innerHTML =
+                '<a target="_blank" href="' + projects[i].url + '">\
+                    <img width="118" style="max-height: 105px !important;"\
+                        src="' + projects[i].pictureUrl + '"\
+                    >\
+                </a>';
     		element.appendChild(symbol);
 
     		var details = document.createElement('div');
