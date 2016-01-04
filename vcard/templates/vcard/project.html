@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Project {{ project.caption }} | Archifirm</title>
-        <link rel="stylesheet" href="/static/vcard/style.css" media="screen" title="no title" charset="utf-8">
-    </head>
-    <body class="project_page">
-        <div class="wrapper">
-            <nav>
-                <ul>
-                    <li><a href="{{ urls.main }}">Main</a></li> |
-                    <li><a href="{{ urls.projects }}">Projects</a></li> |
-                    <li><a href="{{ urls.about }}">About Us</a></li> |
-                    <li><a href="{{ urls.contact }}">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>{{ project.caption }}</h1>
-            <img class="project_img" src="{{ project.picture.url }}" alt=""/>
-            <p class="project_description">{{ project.description }}<p>
-            <div class="unfloat"><div>
-        </div>
-    </body>
-</html>
+<div class="project_details">
+    <h1>{{ project.caption }}</h1>
+    <img class="project_img" src="{{ project.picture.url }}" alt=""/>
+    <p class="project_description">{{ project.description }}<p>
+    <div class="unfloat"><div>
+</div>

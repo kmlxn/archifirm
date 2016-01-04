@@ -9,6 +9,9 @@ $(document).ready(function() {
             if (index == 1 && nextIndex == 2) {
                 $(nav).animate({'bottom': '-50px'}, 700);
                 window.runProjectsTableOnce(window.projects);
+                $('.projectstable .element .picture a').magnificPopup({
+                    type: 'ajax'
+                });
             }
 
             if (index == 2 && nextIndex == 1) {

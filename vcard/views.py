@@ -19,7 +19,7 @@ def get_index_page(request):
     })
 
 
-def get_project_page(request, project_tech_name):
+def get_project_details(request, project_tech_name):
     return render(request, 'vcard/project.html', {
         'project': Project.objects.get(tech_name=project_tech_name),
         'urls': _get_urls(),

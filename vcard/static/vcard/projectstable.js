@@ -49,7 +49,7 @@
     		var symbol = document.createElement('div');
             symbol.className = 'picture';
     		symbol.innerHTML =
-                '<a target="_blank" href="' + projects[i].url + '">\
+                '<a href="' + projects[i].url + '">\
                     <img src="' + projects[i].pictureUrl + '">\
                 </a>';
     		element.appendChild(symbol);

@@ -12,7 +12,8 @@ class Project(models.Model):
     description = models.TextField(null=True)
 
     def get_absolute_url(self):
-        return reverse_lazy('vcard:project_page', kwargs={'project_tech_name': self.tech_name})
+        return reverse_lazy('vcard:project_details',
+            kwargs={'project_tech_name': self.tech_name})
 
     def __str__(self):
         return self.caption
