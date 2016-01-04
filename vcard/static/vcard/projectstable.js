@@ -45,26 +45,23 @@
 
     		var element = document.createElement('div');
     		element.className = 'element';
-    		element.style.backgroundColor = 'rgba(0,127,127,' + (Math.random() * 0.5 + 0.25) + ')';
 
     		var symbol = document.createElement('div');
-    		symbol.className = 'symbol';
+            symbol.className = 'picture';
     		symbol.innerHTML =
                 '<a target="_blank" href="' + projects[i].url + '">\
-                    <img width="118" style="max-height: 105px !important;"\
-                        src="' + projects[i].pictureUrl + '"\
-                    >\
+                    <img src="' + projects[i].pictureUrl + '">\
                 </a>';
     		element.appendChild(symbol);
 
     		var details = document.createElement('div');
-    		details.className = 'details';
+            details.className = 'caption';
     		details.innerHTML = projects[i].caption;
     		element.appendChild(details);
 
     		var object = new THREE.CSS3DObject(element);
-    		object.position.x = Math.random() * 4000 - 2000;
-    		object.position.y = Math.random() * 4000 - 2000;
+            object.position.x = Math.random() * 4000 - 2000;
+            object.position.y = Math.random() * 4000 - 2000;
     		object.position.z = Math.random() * 4000 - 2000;
     		scene.add(object);
 
@@ -73,8 +70,8 @@
     		//
 
     		var object = new THREE.Object3D();
-    		object.position.x = (i % 16 * 140) - 1260;
-    		object.position.y = - (Math.floor(i / 17) * 180);
+            object.position.x = (i % 7 * 220) - 660;
+            object.position.y = - (Math.floor(i / 7) * 220);
 
     		targets.table.push(object);
 
@@ -113,9 +110,9 @@
 
     		var object = new THREE.Object3D();
 
-    		object.position.x = 900 * Math.sin(phi);
-    		object.position.y = - (i * 8);
-    		object.position.z = 900 * Math.cos(phi);
+            object.position.x = 1200 * Math.sin(phi);
+            object.position.y = - (i * 8);
+            object.position.z = 1200 * Math.cos(phi);
 
     		vector.x = object.position.x * 2;
     		vector.y = object.position.y;
