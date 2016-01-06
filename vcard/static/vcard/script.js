@@ -34,12 +34,12 @@ $(document).ready(function() {
     var removeHash = function() {
         var loc = window.location;
 
-        if ("pushState" in history)
-            history.pushState("", document.title, loc.pathname + loc.search);
+        if ('pushState' in history)
+            history.pushState('', document.title, loc.pathname + loc.search);
         else {
-            loc.hash = "";
+            loc.hash = '';
         }
-    }
+    };
 
     var handlePicturesSelectInProjectDetails = function() {
         $('#project_details #additional_pictures a').click(function(e){
