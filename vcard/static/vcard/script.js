@@ -10,7 +10,10 @@ $(document).ready(function() {
                 $(nav).animate({'bottom': '-50px'}, 700);
                 window.runProjectsTableOnce(window.projects);
                 $('.projectstable .element .picture a').magnificPopup({
-                    type: 'ajax'
+                    type: 'ajax',
+                    callbacks: {
+                        ajaxContentAdded: handlePicturesSelectInProjectDetails
+                    }
                 });
             }
 
@@ -37,4 +40,13 @@ $(document).ready(function() {
             loc.hash = "";
         }
     }
+
+    var handlePicturesSelectInProjectDetails = function() {
+        $('#project_details #additional_pictures a').click(function(e){
+            $('#project_details #picture_preview img').attr('src', $(this).attr('href'));
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+            e.preventDefault();
+        });
+    };
 });

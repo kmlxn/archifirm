@@ -6,7 +6,7 @@ from easy_thumbnails.fields import ThumbnailerImageField
 
 class Project(models.Model):
     caption = models.CharField(max_length=255)
-    picture = ThumbnailerImageField(upload_to='projects')
+    main_picture = ThumbnailerImageField(upload_to='projects')
     tech_name = models.CharField(max_length=255, validators=[validate_slug],
         unique=True, help_text="Only latin letters, digits, underscores, hyphens.")
     description = models.TextField(null=True)
@@ -17,3 +17,8 @@ class Project(models.Model):
 
     def __str__(self):
         return self.caption
+
+
+class ProjectAdditionalPicture(models.Model):
+    project = models.ForeignKey(Project)
+    picture = ThumbnailerImageField(upload_to='projects')

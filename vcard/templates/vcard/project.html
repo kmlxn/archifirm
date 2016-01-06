@@ -1,6 +1,26 @@
-<div class="project_details">
+<div id="project_details" class="project_details">
     <h1>{{ project.caption }}</h1>
-    <img class="project_img" src="{{ project.picture.url }}" alt=""/>
-    <p class="project_description">{{ project.description }}<p>
-    <div class="unfloat"><div>
+    <div class="table">
+        <div id="picture_preview" class="cell">
+            <img class="preview" src="{{ project.main_picture.url }}"/>
+        </div>
+        <div class="cell">
+            <div id="additional_pictures" class="additional_pictures">
+                {% if project.projectadditionalpicture_set.all %}
+                    <a class="active" href="{{ project.main_picture.url }}">
+                        <img class="thumb"
+                            src="{{ project.main_picture.small_thumb.url }}"/>
+                    </a>
+                    {% for additional_pic in project.projectadditionalpicture_set.all %}
+                        <a href="{{ additional_pic.picture.url }}">
+                            <img class="thumb"
+                                src="{{ additional_pic.picture.small_thumb.url }}"/>
+                        </a>
+                    {% endfor %}
+                {% endif %}
+                <div class="unfloat"></div>
+            </div>
+            <p class="description">{{ project.description }}</p>
+        </div>
+    </div>
 </div>

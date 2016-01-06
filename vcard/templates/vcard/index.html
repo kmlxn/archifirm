@@ -41,7 +41,7 @@
                         window.projects = [
                             {% for project in projects %}
                                 {
-                                    pictureUrl: "{{ project.picture.small_thumb.url }}",
+                                    pictureUrl: "{{ project.main_picture.small_thumb.url }}",
                                     caption: "{{ project.caption }}",
                                     url: "{{ project.get_absolute_url }}",
                                 },
