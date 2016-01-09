@@ -1,5 +1,4 @@
-var cloudsNum = 15,
-    worldId = 'cloudsworld',
+var worldId = 'cloudsworld',
     viewportId = 'cloudsviewport';
 
 (function() {
@@ -43,12 +42,13 @@ viewport.style.oPerspective = p;
 
 generate();
 
-function createCloud() {
+function createCloud(cloudN, cloudsNum) {
     var div = document.createElement( 'div'  );
     div.className = 'cloudBase';
-    var x = 256 - ( Math.random() * 512 );
-    var y = Math.random() * 256
-    var z = 256 - ( Math.random() * 512 );
+    width = viewport.clientWidth * 0.6;
+    var x = width / 2 - ((cloudN / cloudsNum) * (width));
+    var y = (Math.random() / 3) * (width / 2);
+    var z = width / 4 - ((Math.random() / 4) * (width / 2));
     var t = 'translateX( ' + x + 'px ) translateY( ' + y + 'px ) translateZ( ' + z + 'px )';
     div.style.webkitTransform = t;
     div.style.MozTransform = t;
@@ -98,13 +98,18 @@ viewport.addEventListener( 'mousemove', function( e ) {
 
 function generate() {
     objects = [];
+
     if ( world.hasChildNodes() ) {
         while ( world.childNodes.length >= 1 ) {
             world.removeChild( world.firstChild );
         }
     }
-    for( var j = 0; j < window.cloudsNum; j++ ) {
-        objects.push( createCloud() );
+
+    cloudOccurrencePeriodPx = 150;
+    cloundsNum = Math.floor(viewport.clientWidth / cloudOccurrencePeriodPx);
+
+    for( var cloudN = 0; cloudN <= cloundsNum; cloudN++ ) {
+        objects.push( createCloud(cloudN, cloundsNum) );
     }
 }
 
