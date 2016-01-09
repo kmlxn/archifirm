@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'easy_thumbnails',
+    'constance',
+    'constance.backends.database',
     'vcard',
 )
 
@@ -115,3 +117,6 @@ THUMBNAIL_ALIASES = {
         'small_thumb': {'size': (400, 400), 'crop': True},
     },
 }
+
+
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
