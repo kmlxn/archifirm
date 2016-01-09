@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from .models import Project
 from django.core.urlresolvers import reverse
+
+from constance import config
+
+from .models import Project
 
 
 def _get_urls():
@@ -16,6 +19,7 @@ def get_index_page(request):
     return render(request, 'vcard/index.html', {
         'projects': Project.objects.all(),
         'urls': _get_urls(),
+        'config': config,
     })
 
 
