@@ -24,7 +24,6 @@ $(document).ready(function() {
 
     var startFullpage = function() {
         $('#fullpage').fullpage({
-            anchors: ['hello', 'we'],
             verticalCentered: false,
             controlArrows: false,
             onLeave: function(index, nextIndex, direction) {
