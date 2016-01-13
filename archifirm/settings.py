@@ -125,3 +125,13 @@ CONSTANCE_CONFIG = {
     'ABOUT_US_PAGE_TEXT': ('About us text', 'About us text'),
     'CONTACT_PAGE_TEXT': ('Contact text', 'Contact text'),
 }
+
+
+SECTIONS_CONF = {
+    'hello': {'anchor': 'hello', 'slides': None },
+    'we': {'anchor': 'we', 'slides': {
+        'projects': {'anchor': 'projects'},
+        'about': {'anchor': 'about'},
+        'contact': {'anchor': 'contact'},
+    }},
+}

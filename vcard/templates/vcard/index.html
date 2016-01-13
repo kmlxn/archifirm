@@ -11,13 +11,13 @@
     </head>
     <body class="index_page">
         <div id="fullpage">
-            <div class="section hello" data-anchor="hello">
+            <div class="section hello" data-anchor="{{ sections_conf.hello.anchor }}">
                 <nav>
                     <ul>
-                        <li><a href="{{ urls.main }}">Main</a></li> |
-                        <li><a href="{{ urls.projects }}">Projects</a></li> |
-                        <li><a href="{{ urls.about }}">About Us</a></li> |
-                        <li><a href="{{ urls.contact }}">Contact</a></li>
+                        <li><a href="{{ sections_conf.hello.hash }}">Main</a></li> |
+                        <li><a href="{{ sections_conf.we.slides.projects.hash }}">Projects</a></li> |
+                        <li><a href="{{ sections_conf.we.slides.about.hash }}">About Us</a></li> |
+                        <li><a href="{{ sections_conf.we.slides.contact.hash }}">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="gradient"></div>
@@ -28,8 +28,8 @@
                     <div id="cloudsworld"></div>
                 </div>
             </div>
-            <div class="section we" data-anchor="we">
-                <div class="slide" data-anchor="projects">
+            <div class="section we" data-anchor="{{ sections_conf.we.anchor }}">
+                <div class="slide" data-anchor="{{ sections_conf.we.slides.projects.anchor }}">
                     <div class="projectstable" id="projectstable"></div>
                     <div class="projectsmenu">
                         <button id="projectstable_table">TABLE</button>
@@ -49,8 +49,12 @@
                         ];
                     </script>
                 </div>
-                <div class="slide" data-anchor="about">{{ config.ABOUT_US_PAGE_TEXT }}</div>
-                <div class="slide" data-anchor="contact">{{ config.CONTACT_PAGE_TEXT }}</div>
+                <div class="slide" data-anchor="{{ sections_conf.we.slides.about.anchor }}">
+                    {{ about_us_text }}
+                </div>
+                <div class="slide" data-anchor="{{ sections_conf.we.slides.contact.anchor }}">
+                    {{ contact_text }}
+                </div>
             </div>
         </div>
     </body>
