@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
 
-from constance import config
+from constance import config as dynamic_settings
 
 from .models import Project
 
@@ -19,7 +19,7 @@ def get_index_page(request):
     return render(request, 'vcard/index.html', {
         'projects': Project.objects.all(),
         'urls': _get_urls(),
-        'config': config,
+        'config': dynamic_settings,
     })
 
 
