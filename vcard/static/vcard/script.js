@@ -55,21 +55,10 @@ $(document).ready(function() {
         });
     };
 
-    var autoRemoveMainSectionHash = function() {
-        $(window).on('hashchange', function() {
-            if (window.location.hash == '#hello')
-            removeHash();
-        });
-
-        var removeHash = function() {
-            var loc = window.location;
-
-            if ('pushState' in history)
-                history.pushState('', document.title, loc.pathname + loc.search);
-            else {
-                loc.hash = '';
-            }
-        };
+    var autoSetHashForMainSection = function() {
+        mainSection = $('#section').first();
+        mainSectionAnchor = $(mainSection).attr('data-anchor');
+        window.location.hash = window.location.hash || '#' + mainSectionAnchor;
     };
 
     var disableManualScrolling = function() {
@@ -80,7 +69,7 @@ $(document).ready(function() {
     var handleFullpage = function() {
         startFullpage();
         disableManualScrolling();
-        autoRemoveMainSectionHash();
+        autoSetHashForMainSection();
     };
 
     handleFullpage();
