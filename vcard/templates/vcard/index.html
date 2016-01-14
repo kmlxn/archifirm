@@ -11,7 +11,9 @@
     </head>
     <body class="index_page">
         <div id="fullpage">
-            <div class="section hello" data-anchor="{{ sections_conf.hello.anchor }}">
+            <div class="section hello" id="section"
+                data-anchor="{{ sections_conf.hello.anchor }}"
+            >
                 <nav>
                     <ul>
                         <li><a href="{{ sections_conf.hello.hash }}">Main</a></li> |
@@ -28,8 +30,12 @@
                     <div id="cloudsworld"></div>
                 </div>
             </div>
-            <div class="section we" data-anchor="{{ sections_conf.we.anchor }}">
-                <div class="slide" data-anchor="{{ sections_conf.we.slides.projects.anchor }}">
+            <div class="section we" id="section"
+                data-anchor="{{ sections_conf.we.anchor }}"
+            >
+                <div class="slide" id="slide"
+                    data-anchor="{{ sections_conf.we.slides.projects.anchor }}"
+                >
                     <div class="projectstable" id="projectstable"></div>
                     <div class="projectsmenu">
                         <button id="projectstable_table">TABLE</button>
@@ -49,10 +55,14 @@
                         ];
                     </script>
                 </div>
-                <div class="slide" data-anchor="{{ sections_conf.we.slides.about.anchor }}">
+                <div class="slide" id="slide"
+                    data-anchor="{{ sections_conf.we.slides.about.anchor }}"
+                >
                     {{ about_us_text }}
                 </div>
-                <div class="slide" data-anchor="{{ sections_conf.we.slides.contact.anchor }}">
+                <div class="slide" id="slide"
+                    data-anchor="{{ sections_conf.we.slides.contact.anchor }}"
+                >
                     {{ contact_text }}
                 </div>
             </div>
