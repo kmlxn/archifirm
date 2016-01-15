@@ -66,9 +66,24 @@ $(document).ready(function() {
         $.fn.fullpage.setKeyboardScrolling(false);
     };
 
+    var highlightActiveMenuItem = function() {
+        activePageUnitAnchor = "li a[href='" + window.location.hash + "']";
+        activeMenuItem = $(activePageUnitAnchor, menu).parent();
+        $(activeMenuItem).addClass('active');
+        $(activeMenuItem).siblings().removeClass('active');
+    };
+
+    var autoHighlightActiveMenuItem = function() {
+        highlightActiveMenuItem();
+        $(window).on('hashchange', function() {
+            highlightActiveMenuItem();
+        });
+    };
+
     var handleFullpage = function() {
         startFullpage();
         disableManualScrolling();
+        autoHighlightActiveMenuItem();
         autoSetHashForMainSection();
     };
 
