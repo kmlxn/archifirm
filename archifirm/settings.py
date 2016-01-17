@@ -125,6 +125,7 @@ CONSTANCE_CONFIG = {
     'ABOUT_US_PAGE_TEXT': ('About us text', 'About us text'),
     'CONTACT_PAGE_TEXT': ('Contact text', 'Contact text'),
     'H1_TEXT': ('Architect', 'H1 text'),
+    'PAGE_TITLE': ('Architect', 'Page title'),
 }
 
 

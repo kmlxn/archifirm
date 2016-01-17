@@ -24,6 +24,7 @@ def get_index_page(request):
         'about_us_text': dynamic_settings.ABOUT_US_PAGE_TEXT,
         'contact_text': dynamic_settings.CONTACT_PAGE_TEXT,
         'h1_text': dynamic_settings.H1_TEXT,
+        'page_title': dynamic_settings.PAGE_TITLE,
         'projects': Project.objects.all(),
     })
 
