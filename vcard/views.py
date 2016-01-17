@@ -23,6 +23,7 @@ def get_index_page(request):
         'sections_conf': prepare_sections_conf(),
         'about_us_text': dynamic_settings.ABOUT_US_PAGE_TEXT,
         'contact_text': dynamic_settings.CONTACT_PAGE_TEXT,
+        'h1_text': dynamic_settings.H1_TEXT,
         'projects': Project.objects.all(),
     })
 

@@ -124,6 +124,7 @@ CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 CONSTANCE_CONFIG = {
     'ABOUT_US_PAGE_TEXT': ('About us text', 'About us text'),
     'CONTACT_PAGE_TEXT': ('Contact text', 'Contact text'),
+    'H1_TEXT': ('Architect', 'H1 text'),
 }
 
 
