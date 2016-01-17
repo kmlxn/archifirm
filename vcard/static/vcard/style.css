@@ -74,6 +74,13 @@ body.index_page {
 .content {
     margin: 100px 100px 0 100px;
 }
+.info {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 11px;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+}
 
 .slide {  /* Fullpage.js tweak */
     position:relative;
