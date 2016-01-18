@@ -20,7 +20,7 @@ def deploy(site_name):
 
 
 def _create_directory_structure_if_necessary(site_folder):
-    for subfolder in ('database', 'static', 'virtualenv', 'source'):
+    for subfolder in ('database', 'static', 'virtualenv', 'source', 'media'):
         run('mkdir -p %s/%s' % (site_folder, subfolder))
 
 
