@@ -75,10 +75,10 @@ body.index_page {
     margin: 100px 100px 0 100px;
 }
 .info {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.5);;
     font-size: 11px;
-    bottom: 10px;
-    left: 10px;
+    top: 10px;
+    right: 10px;
     position: absolute;
 }
 
