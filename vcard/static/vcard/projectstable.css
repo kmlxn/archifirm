@@ -13,10 +13,9 @@
     display: block;
 }
 .projectstable .element:hover {
-    width: 400px;
-    height: 400px;
-    z-index: 100;
-    font-size: 22px;
+    width: 240px;
+    height: 240px;
+    font-size: 15px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0 ,0, 0.1);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
