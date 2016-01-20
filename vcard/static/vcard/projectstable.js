@@ -147,7 +147,7 @@
 
         //
 
-        controls = new THREE.TrackballControls(camera, renderer.domElement);
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.rotateSpeed = 1;
         controls.minDistance = 500;
         controls.maxDistance = 6000;
