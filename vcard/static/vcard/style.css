@@ -130,6 +130,9 @@ body.index_page {
     .project_details .table .cell {
         display: table-row;
     }
+    .content {
+        margin: 75px 50px 0 50px;
+    }
 }
 .mfp-wrap ~ * { /* Magnific Popup */
     filter: blur(1px);
